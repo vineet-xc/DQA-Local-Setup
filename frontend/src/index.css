@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base colors - light theme */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    /* Primary colors - blue from palette */
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary colors - gray slate */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+
+    /* Muted colors */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Accent colors */
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+
+    /* Destructive colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Border and input */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+
+    /* Surface colors */
+    --surface: 0 0% 100%;
+    --surface-secondary: 210 40% 96%;
+    --surface-tertiary: 214.3 31.8% 91.4%;
+
+    /* Semantic colors - success green */
+    --success: 142 76% 36%;
+    --success-foreground: 355.7 100% 97.3%;
+    --success-muted: 138 76% 97%;
+
+    /* Warning colors - yellow/amber */
+    --warning: 47.9 95.8% 53.1%;
+    --warning-foreground: 26 83.3% 14.1%;
+    --warning-muted: 48 96% 89%;
+
+    /* Danger colors - red */
+    --danger: 0 84% 60%;
+    --danger-foreground: 355.7 100% 97.3%;
+    --danger-muted: 0 93% 94%;
+
+    /* Info colors - blue */
+    --info: 221 83% 53%;
+    --info-foreground: 210 40% 98%;
+    --info-muted: 215 100% 97%;
+
+    /* Scrollbar colors */
+    --scrollbar-track: transparent;
+    --scrollbar-thumb: 214.3 31.8% 91.4%;
+    --scrollbar-thumb-hover: 215.4 16.3% 46.9%;
+
+    /* Popover colors - solid background */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Base colors - dark theme */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    /* Primary colors - lighter blue for dark mode */
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 84% 4.9%;
+
+    /* Secondary colors - dark gray */
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted colors */
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    /* Accent colors */
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Destructive colors */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Border and input */
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    /* Surface colors */
+    --surface: 222.2 84% 4.9%;
+    --surface-secondary: 217.2 32.6% 17.5%;
+    --surface-tertiary: 215 27.9% 16.9%;
+
+    /* Semantic colors - success green for dark */
+    --success: 142 71% 45%;
+    --success-foreground: 144.9 80.4% 10%;
+    --success-muted: 144 100% 3%;
+
+    /* Warning colors - amber for dark */
+    --warning: 47.9 95.8% 53.1%;
+    --warning-foreground: 20.9 91.2% 14.1%;
+    --warning-muted: 48 100% 6%;
+
+    /* Danger colors - red for dark */
+    --danger: 0 84% 70%;
+    --danger-foreground: 210 40% 98%;
+    --danger-muted: 0 93% 5%;
+
+    /* Info colors - blue for dark */
+    --info: 221 83% 65%;
+    --info-foreground: 210 40% 98%;
+    --info-muted: 215 100% 6%;
+
+    /* Scrollbar colors for dark */
+    --scrollbar-track: transparent;
+    --scrollbar-thumb: 215 27.9% 25%;
+    --scrollbar-thumb-hover: 215 20.2% 45%;
+
+    /* Popover colors for dark - solid background */
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  /* Light theme scrollbar */
+  :root ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  :root ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  :root ::-webkit-scrollbar-thumb {
+    background: hsl(var(--scrollbar-thumb));
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+
+  :root ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--scrollbar-thumb-hover));
+  }
+
+  :root ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Dark theme scrollbar */
+  .dark ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: hsl(var(--scrollbar-thumb));
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--scrollbar-thumb-hover));
+  }
+
+  .dark ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Firefox scrollbar styles */
+  :root * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--scrollbar-thumb)) transparent;
+  }
+
+  .dark * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--scrollbar-thumb)) transparent;
+  }
+}
