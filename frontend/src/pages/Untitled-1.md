@@ -1,1 +1,0 @@
-git clone https://github.com/vineet-xc/DQA-Local-Setup
